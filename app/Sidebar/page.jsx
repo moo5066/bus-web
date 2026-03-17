@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineDashboard } from "react-icons/md";
@@ -7,25 +9,26 @@ import { FaRegCalendar } from "react-icons/fa6";
 import { MdPeopleAlt } from "react-icons/md";
 import { TbBrandBooking } from "react-icons/tb";
 
+
+
 const page = () => {
   return (
     <div>
-    {/* when its close */}
 
+    {/* when its close */}
   <div className='h-screen p-8 w-full border-r border-gray-300'>
     <div className='flex flex-col space-y-5'>
     <div>
-    <IoIosMenu size={20}/>
-    <hr className='-mx-8 text-gray-400 mt-3' />
+    <IoIosMenu size={30} className='hover:bg-gray-200 p-1 rounded-lg cursor-pointer'/>
+    <hr className='-mx-8 text-gray-300 mt-3' />
 </div>
 
-<div className='flex flex-col space-y-5 text-black'>
-<MdOutlineDashboard size={20} className='hover:bg-gray-200 hover:rounded-lg'/>
-<TbBus size={20}/>
-<GrLocation size={20}/>
-<FaRegCalendar size={20}/>
-<MdPeopleAlt size={20}/>
-<TbBrandBooking size={20}/>
+<div className='flex flex-col space-y-5 text-gray-700'>
+<MdOutlineDashboard size={30} className='hover:bg-gray-200 p-1 rounded-lg cursor-pointer' />
+<GrLocation size={30} className='hover:bg-gray-200 p-1 rounded-lg cursor-pointer' />
+<FaRegCalendar size={30} className='hover:bg-gray-200 p-1 rounded-lg cursor-pointer' />
+<MdPeopleAlt size={30} className='hover:bg-gray-200 p-1 rounded-lg cursor-pointer' />
+<TbBrandBooking size={30} className='hover:bg-gray-200 p-1 rounded-lg cursor-pointer' />
 </div>
 </div>
 
