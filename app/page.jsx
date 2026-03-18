@@ -1,5 +1,6 @@
 import React from 'react'
-import Sidebar from './Sidebar/page.jsx'
+import Sidebar from './components/Sidebar/page.jsx'
+import Dashboard from './components/Dashboard/page.jsx'
 
 const page = () => {
   return (
@@ -7,6 +8,7 @@ const page = () => {
       <div>
       <Sidebar/>
       </div>
+     <Dashboard/>
     </div>
   )
 }

@@ -9,6 +9,7 @@ import { GrLocation } from "react-icons/gr";
 import { FaRegCalendar } from "react-icons/fa6";
 import { MdPeopleAlt } from "react-icons/md";
 import { TbBrandBooking } from "react-icons/tb";
+import Link from 'next/link'
 
 
 const Page = () => {
@@ -30,33 +31,33 @@ const Page = () => {
 
         <div className='flex flex-col space-y-5 text-gray-700 mt-5'>
           {/* Dashboard */}
-          <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <MdOutlineDashboard size={30} />
+          <Link href='Dashboard' className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
+            <MdOutlineDashboard size={25} />
             {isOpen && <span className='text-blue-500'>Dashboard</span>}
-          </div>
+          </Link>
           {/* Buses */}
           <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <TbBus size={30}/>
+            <TbBus size={25}/>
             {isOpen && <span className='text-blue-500'>Buses</span>}
           </div>
           {/* Routes */}
           <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <GrLocation size={30} />
+            <GrLocation size={25} />
             {isOpen && <span className='text-blue-500'>Routes</span>}
           </div>
           {/* Schedules */}
           <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <FaRegCalendar size={30} />
+            <FaRegCalendar size={25} />
             {isOpen && <span className='text-blue-500'>Schedules</span>}
           </div>
           {/* Drivers */}
           <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <MdPeopleAlt size={30} />
+            <MdPeopleAlt size={25} />
             {isOpen && <span className='text-blue-500'>Drivers</span>}
           </div>
           {/* Booking */}
           <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <TbBrandBooking size={30} />
+            <TbBrandBooking size={25} />
             {isOpen && <span className='text-blue-500'>Booking</span>}
           </div>
         </div>
