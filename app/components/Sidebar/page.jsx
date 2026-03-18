@@ -12,8 +12,20 @@ import { TbBrandBooking } from "react-icons/tb";
 import Link from 'next/link'
 
 
+
 const Page = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [active, setActive] = useState('Dashboard')
+
+  const menuItems = [
+    { name: 'Dashboard', icon: MdOutlineDashboard, href: './components/Dashboard' },
+    { name: 'Buses', icon: TbBus },
+    { name: 'Routes', icon: GrLocation },
+    { name: 'Schedules', icon: FaRegCalendar },
+    { name: 'Drivers', icon: MdPeopleAlt },
+    { name: 'Booking', icon: TbBrandBooking },
+  ]
+  
   return (
     <div>
       <div className={`h-screen p-8 border-r border-gray-300 ${isOpen ? 'w-64' : 'w-fit'} flex flex-col`}>
@@ -30,36 +42,24 @@ const Page = () => {
         </div>
 
         <div className='flex flex-col space-y-5 text-gray-700 mt-5'>
-          {/* Dashboard */}
-          <Link href='Dashboard' className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <MdOutlineDashboard size={25} />
-            {isOpen && <span className='text-blue-500'>Dashboard</span>}
-          </Link>
-          {/* Buses */}
-          <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <TbBus size={25}/>
-            {isOpen && <span className='text-blue-500'>Buses</span>}
-          </div>
-          {/* Routes */}
-          <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <GrLocation size={25} />
-            {isOpen && <span className='text-blue-500'>Routes</span>}
-          </div>
-          {/* Schedules */}
-          <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <FaRegCalendar size={25} />
-            {isOpen && <span className='text-blue-500'>Schedules</span>}
-          </div>
-          {/* Drivers */}
-          <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <MdPeopleAlt size={25} />
-            {isOpen && <span className='text-blue-500'>Drivers</span>}
-          </div>
-          {/* Booking */}
-          <div className='flex items-center space-x-3 hover:bg-gray-200 p-1 rounded-lg cursor-pointer'>
-            <TbBrandBooking size={25} />
-            {isOpen && <span className='text-blue-500'>Booking</span>}
-          </div>
+          {menuItems.map((item) => (
+            <div key={item.name} onClick={() => setActive(item.name)}>
+              {item.href ? (
+                <Link
+                  href={item.href}
+                  className={`flex items-center space-x-3 p-1 rounded-lg cursor-pointer ${active === item.name ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`}
+                >
+                  <item.icon size={25} />
+                  {isOpen && <span className={active === item.name ? '' : 'text-blue-500'}>{item.name}</span>}
+                </Link>
+              ) : (
+                <div className={`flex items-center space-x-3 p-1 rounded-lg cursor-pointer ${active === item.name ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`}>
+                  <item.icon size={25} />
+                  {isOpen && <span className={active === item.name ? '' : 'text-blue-500'}>{item.name}</span>}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

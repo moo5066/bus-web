@@ -1,9 +1,15 @@
 import React from 'react'
 import { TbBus } from "react-icons/tb";
+import { IoExitOutline } from "react-icons/io5";
+import Link from 'next/link'
+
 
 const page = () => {
   return (
     <div className='px-5 py-2'>
+      <Link href='/' className='absolute top-0 right-0 m-5 cursor-pointer text-gray-600 hover:text-blue-500'>
+        <IoExitOutline size={30} />
+      </Link>
       <div>
         <h1 className='text-gray-600 font-medium '>Overview of your bus management system</h1>
 
