@@ -1,6 +1,8 @@
 import React from 'react'
 import Sidebar from './components/Sidebar/page.jsx'
 import Dashboard from './components/Dashboard/page.jsx'
+// import Buses from './components/Buses/page.jsx'
+
 
 const page = () => {
   return (
@@ -9,6 +11,7 @@ const page = () => {
       <Sidebar/>
       </div>
      <Dashboard/>
+     
     </div>
   )
 }
