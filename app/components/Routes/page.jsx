@@ -18,9 +18,33 @@ const page = () => {
     <Link href='/routes'>+  Add Route</Link>
   </div>
 </div>
-<div>
-  
+
+
+<div className='space-y-5 flex flex-col items-center md:flex-row md:justify-between md:gap-5 md:items-center lg: mt-10'>
+  <div className='border border-gray-300 rounded-lg w-80 h-37 flex flex-col gap-15 p-5'>
+    <p className='font-semibold'>Total Routes</p>
+    <p className='font-bold text-3xl'>4</p>
+  </div>
+
+   <div className='border border-gray-300 rounded-lg w-80 h-37 flex flex-col gap-15 p-5'>
+    <p  className='font-semibold'>Total Distance</p>
+    <p className='font-bold text-3xl'>148 km</p>
+  </div>
+
+   <div className='border border-gray-300 rounded-lg w-80 h-37 flex flex-col gap-15 p-5'>
+    <p className='font-semibold'>Avg Duration</p>
+    <p className='font-bold text-3xl'>73 min</p>
+  </div>
+
+   <div className='border border-gray-300 rounded-lg w-80 h-37 flex flex-col gap-15 p-5'>
+    <p className='font-semibold'>Total Stops</p>
+    <p className='font-bold text-3xl'>20</p>
+
+
+  </div>
 </div>
+
+
   </div>
 </div>
 
