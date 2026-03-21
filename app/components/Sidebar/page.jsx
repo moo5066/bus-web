@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineDashboard } from "react-icons/md";
 import { TbBus } from "react-icons/tb";
-import { HiOutlineMap, HiOutlineCalendar, HiOutlineUserGroup, HiOutlineTicket } from "react-icons/hi2";
+import { HiOutlineCalendar, HiOutlineUserGroup, HiOutlineTicket } from "react-icons/hi2";
 import Link from 'next/link'
 import { CiLocationOn } from "react-icons/ci";
 
@@ -19,7 +19,7 @@ const Page = () => {
   const menuItems = [
     { name: 'Dashboard', icon: MdOutlineDashboard, href: '/' },
     { name: 'Buses', icon: TbBus, href: '/components/Buses'},
-    { name: 'Routes', icon: CiLocationOn, href: '#' },
+    { name: 'Routes', icon: CiLocationOn, href: '/components/Routes' },
     { name: 'Schedules', icon: HiOutlineCalendar, href: '#' },
     { name: 'Drivers', icon: HiOutlineUserGroup, href: '#' },
     { name: 'Booking', icon: HiOutlineTicket, href: '#' },
