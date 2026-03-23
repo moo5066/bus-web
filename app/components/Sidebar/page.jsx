@@ -20,7 +20,7 @@ const Page = () => {
     { name: 'Dashboard', icon: MdOutlineDashboard, href: '/' },
     { name: 'Buses', icon: TbBus, href: '/components/Buses'},
     { name: 'Routes', icon: CiLocationOn, href: '/components/Routes' },
-    { name: 'Schedules', icon: HiOutlineCalendar, href: '#' },
+    { name: 'Schedules', icon: HiOutlineCalendar, href: '/components/Schedules' },
     { name: 'Drivers', icon: HiOutlineUserGroup, href: '#' },
     { name: 'Booking', icon: HiOutlineTicket, href: '#' },
   ]
