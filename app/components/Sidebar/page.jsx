@@ -21,7 +21,7 @@ const Page = () => {
     { name: 'Buses', icon: TbBus, href: '/components/Buses'},
     { name: 'Routes', icon: CiLocationOn, href: '/components/Routes' },
     { name: 'Schedules', icon: HiOutlineCalendar, href: '/components/Schedules' },
-    { name: 'Drivers', icon: HiOutlineUserGroup, href: '#' },
+    { name: 'Drivers', icon: HiOutlineUserGroup, href: '/components/Drivers' },
     { name: 'Booking', icon: HiOutlineTicket, href: '#' },
   ]
   return (

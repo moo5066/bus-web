@@ -19,7 +19,7 @@ const Page = () => {
   ]
 
   return (
-    <div className='p-6 w-full bg-slate-50 min-h-screen text-slate-800 font-sans'>
+    <div className='p-6 w-full bg-slate-50 h-full overflow-y-auto text-slate-800 font-sans'>
       
       {/* Header */}
       <div className='flex justify-between items-start mb-10'>

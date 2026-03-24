@@ -8,10 +8,10 @@ import { LuDollarSign } from "react-icons/lu";
 import Link from 'next/link'
 const page = () => {
   return (
-   <div className='flex h-screen'>
+    <div className='flex h-screen bg-gray-50'>
 <Sidebar/>
 
-<div className='h-20 w-full p-7 '>
+<div className='h-20 w-full h-full overflow-y-auto p-7 '>
   <div>
     <div className='flex justify-between'>
     <div className='flex flex-col'>
