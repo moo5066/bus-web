@@ -1,6 +1,9 @@
 import React from 'react'
 import Sidebar from '@/app/components/Sidebar/page.jsx'
 import { CiSearch } from "react-icons/ci";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { SiExpertsexchange } from "react-icons/si";
 
 const page = () => {
   return (
@@ -49,10 +52,212 @@ const page = () => {
    <p className='text-2xl font-bold'>7 years</p>
 </div>
 
+</div>
+
+<div className='flex flex-col md:flex-row md:flex-wrap md:gap-15'>
+<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+   <div>
+   <div className='flex justify-between'>
+      <div>
+      <h1 className='text-xl font-semibold'>John Smith</h1>
+      <p className='text-gray-600'>DL-2018-1234</p>
+      </div>
+<div className=''>
+   <p className='bg-blue-200 w-20 p-0.5 text-sm text-center rounded-lg '>on-duty</p>
+</div>
+   </div>
+
+<div className='mt-10'>
+   <div className='flex gap-3 items-center'>
+   <FaPhoneAlt className='text-gray-500'/>
+   <p className='text-md'>+1-555-0101</p>
+   </div>
+
+<div className='mt-5 flex gap-3 items-center'>
+   <MdOutlineMailOutline className='text-gray-500'/>
+   <p className='text-md'>john.smith@busco.com</p>
+</div>
+
+<div className='mt-5 flex gap-3 items-center'>
+<SiExpertsexchange className='text-gray-500'/>
+<p className='text-md'>8 years experience</p>
+</div>
+
+
+</div>
+
+<div className='mt-10 flex flex-row gap-5 items-center justify-center'>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+</div>
+
+
+   </div>
+</div>
 
 
 
+<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+   <div>
+   <div className='flex justify-between'>
+      <div>
+      <h1 className='text-xl font-semibold'>Sarah Johnson</h1>
+      <p className='text-gray-600'>DL-2019-5678</p>
+      </div>
+<div className=''>
+   <p className='bg-blue-200 w-20 p-0.5 text-sm text-center rounded-lg '>on-duty</p>
+</div>
+   </div>
 
+<div className='mt-10'>
+   <div className='flex gap-3 items-center'>
+   <FaPhoneAlt className='text-gray-500'/>
+   <p className='text-md'>+1-555-0102</p>
+   </div>
+
+<div className='mt-5 flex gap-3 items-center'>
+   <MdOutlineMailOutline className='text-gray-500'/>
+   <p className='text-md'>sarah.johnson@busco.com</p>
+</div>
+
+<div className='mt-5 flex gap-3 items-center'>
+<SiExpertsexchange className='text-gray-500'/>
+<p className='text-md'>6 years experience</p>
+</div>
+
+
+</div>
+
+<div className='mt-10 flex flex-row gap-5 items-center justify-center'>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+</div>
+
+
+   </div>
+</div>
+
+
+<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+   <div>
+   <div className='flex justify-between'>
+      <div>
+      <h1 className='text-xl font-semibold'>Mike Davis</h1>
+      <p className='text-gray-600'>DL-2017-9012</p>
+      </div>
+<div className=''>
+   <p className='bg-blue-200 w-20 p-0.5 text-sm text-center rounded-lg '>on-duty</p>
+</div>
+   </div>
+
+<div className='mt-10'>
+   <div className='flex gap-3 items-center'>
+   <FaPhoneAlt className='text-gray-500'/>
+   <p className='text-md'>+1-555-0103</p>
+   </div>
+
+<div className='mt-5 flex gap-3 items-center'>
+   <MdOutlineMailOutline className='text-gray-500'/>
+   <p className='text-md'>mike.davis@busco.com</p>
+</div>
+
+<div className='mt-5 flex gap-3 items-center'>
+<SiExpertsexchange className='text-gray-500'/>
+<p className='text-md'>10 years experience</p>
+</div>
+
+
+</div>
+
+<div className='mt-10 flex flex-row gap-5 items-center justify-center'>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+</div>
+
+
+   </div>
+</div>
+
+
+
+<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+   <div>
+   <div className='flex justify-between'>
+      <div>
+      <h1 className='text-xl font-semibold'>Emily Brown</h1>
+      <p className='text-gray-600'>DL-2020-3456</p>
+      </div>
+<div className=''>
+   <p className='bg-blue-200 w-20 p-0.5 text-sm text-center rounded-lg '>on-duty</p>
+</div>
+   </div>
+
+<div className='mt-10'>
+   <div className='flex gap-3 items-center'>
+   <FaPhoneAlt className='text-gray-500'/>
+   <p className='text-md'>+1-555-0104</p>
+   </div>
+
+<div className='mt-5 flex gap-3 items-center'>
+   <MdOutlineMailOutline className='text-gray-500'/>
+   <p className='text-md'>emily.brown@busco.com</p>
+</div>
+
+<div className='mt-5 flex gap-3 items-center'>
+<SiExpertsexchange className='text-gray-500'/>
+<p className='text-md'>5 years experience</p>
+</div>
+
+
+</div>
+
+<div className='mt-10 flex flex-row gap-5 items-center justify-center'>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+</div>
+
+
+   </div>
+</div>
+
+<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+   <div>
+   <div className='flex justify-between'>
+      <div>
+      <h1 className='text-xl font-semibold'>David Wilson</h1>
+      <p className='text-gray-600'>DL-2021-7890</p>
+      </div>
+<div className=''>
+   <p className='bg-green-200 w-20 p-0.5 text-sm text-center rounded-lg '>available</p>
+</div>
+   </div>
+
+<div className='mt-10'>
+   <div className='flex gap-3 items-center'>
+   <FaPhoneAlt className='text-gray-500'/>
+   <p className='text-md'>+1-555-0105</p>
+   </div>
+
+<div className='mt-5 flex gap-3 items-center'>
+   <MdOutlineMailOutline className='text-gray-500'/>
+   <p className='text-md'>david.wilson@busco.com</p>
+</div>
+
+<div className='mt-5 flex gap-3 items-center'>
+<SiExpertsexchange className='text-gray-500'/>
+<p className='text-md'>4 years experience</p>
+</div>
+
+
+</div>
+
+<div className='mt-10 flex flex-row gap-5 items-center justify-center'>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+</div>
+
+</div>
+   </div>
 </div>
 
       </div>
