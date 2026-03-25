@@ -22,7 +22,7 @@ const Page = () => {
     { name: 'Routes', icon: CiLocationOn, href: '/components/Routes' },
     { name: 'Schedules', icon: HiOutlineCalendar, href: '/components/Schedules' },
     { name: 'Drivers', icon: HiOutlineUserGroup, href: '/components/Drivers' },
-    { name: 'Booking', icon: HiOutlineTicket, href: '#' },
+    { name: 'Booking', icon: HiOutlineTicket, href: '/components/Booking' },
   ]
   return (
     <div>

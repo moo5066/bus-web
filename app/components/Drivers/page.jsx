@@ -55,7 +55,7 @@ const page = () => {
 </div>
 
 <div className='flex flex-col md:flex-row md:flex-wrap md:gap-15'>
-<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+<div className='hover:shadow-lg md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
    <div>
    <div className='flex justify-between'>
       <div>
@@ -87,8 +87,8 @@ const page = () => {
 </div>
 
 <div className='mt-10 flex flex-row gap-5 items-center justify-center'>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+   <p className='border hover:bg-gray-200 px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 hover:bg-gray-200 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
 </div>
 
 
@@ -97,7 +97,7 @@ const page = () => {
 
 
 
-<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+<div className='hover:shadow-lg md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
    <div>
    <div className='flex justify-between'>
       <div>
@@ -129,8 +129,8 @@ const page = () => {
 </div>
 
 <div className='mt-10 flex flex-row gap-5 items-center justify-center'>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
 </div>
 
 
@@ -138,7 +138,7 @@ const page = () => {
 </div>
 
 
-<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+<div className='hover:shadow-lg md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
    <div>
    <div className='flex justify-between'>
       <div>
@@ -170,8 +170,8 @@ const page = () => {
 </div>
 
 <div className='mt-10 flex flex-row gap-5 items-center justify-center'>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
 </div>
 
 
@@ -180,7 +180,7 @@ const page = () => {
 
 
 
-<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+<div className='hover:shadow-lg md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
    <div>
    <div className='flex justify-between'>
       <div>
@@ -212,15 +212,15 @@ const page = () => {
 </div>
 
 <div className='mt-10 flex flex-row gap-5 items-center justify-center'>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
 </div>
 
 
    </div>
 </div>
 
-<div className=' md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
+<div className='hover:shadow-lg md:w-[40%] mt-20 border border-gray-300 rounded-lg p-5 text-gray-700'>
    <div>
    <div className='flex justify-between'>
       <div>
@@ -252,8 +252,8 @@ const page = () => {
 </div>
 
 <div className='mt-10 flex flex-row gap-5 items-center justify-center'>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
-   <p className='border px-2 py-1 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Edit</p>
+   <p className='border px-2 py-1 hover:bg-gray-200 border-gray-300 rounded-lg w-60 text-center'>Assign</p>
 </div>
 
 </div>
