@@ -1,23 +1,109 @@
+'use client'
+
+
 import React from 'react'
 import Link from 'next/link'
 import Sidebar from '../Sidebar/page'
 import { CiSearch } from "react-icons/ci";
 import { AiFillTool } from "react-icons/ai";
+import { useState } from 'react';
+
 
 const page = () => {
+  const [open,setOpen]=useState(false)
   return (
     <div className='flex h-screen overflow-hidden'>
       <Sidebar />
-      <main className='flex-grow p-8 overflow-y-auto'>
+      <main className='flex-row p-8 overflow-y-auto'>
         <div className='flex justify-between items-center mb-8'>
           <div>
             <h1 className='text-3xl font-bold'>Buses</h1>
             <p className='text-gray-500'>Manage your bus fleet</p>
           </div>
 
-          <Link href='/' className='bg-black text-white px-4 py-2 rounded-lg  font-semibold'>
-            + Add Bus
-          </Link>
+          <button 
+  onClick={() => setOpen(true)}
+  className='bg-black text-white px-4 py-2 rounded-lg font-semibold'
+>
+  + Add Bus
+</button>
+{open && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+    
+    <div className="bg-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
+      
+      {/* Close button */}
+      <button
+        onClick={() => setOpen(false)}
+        className="absolute top-4 right-4 text-gray-500 hover:text-black"
+      >
+        ✕
+      </button>
+
+      {/* Title */}
+      <h2 className="text-xl font-semibold mb-1">Add New Bus</h2>
+      <p className="text-gray-500 text-sm mb-4">
+        Add a new bus to your fleet
+      </p>
+
+      {/* Form */}
+      <form className="space-y-4">
+        
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Bus Number
+          </label>
+          <input
+            type="text"
+            placeholder="BUS-006"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Model
+          </label>
+          <input
+            type="text"
+            placeholder="Volvo 9700"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Capacity
+          </label>
+          <input
+            type="number"
+            placeholder="50"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Status
+          </label>
+          <select className="w-full border rounded-lg px-3 py-2">
+            <option>Select status</option>
+            <option>Active</option>
+            <option>Maintenance</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800"
+        >
+          Add Bus
+        </button>
+      </form>
+    </div>
+  </div>
+)}
         </div>
         {/* You can add your list of buses or a data table here */}
 
