@@ -104,6 +104,7 @@ const ScheduleRow = ({ schedule }) => {
 
 const Page = () => {
     const [activeTab, setActiveTab] = useState('All');
+const [open , setOpen]=useState(false)
 
     const stats = useMemo(() => ({
         total: schedulesData.length,
@@ -128,13 +129,74 @@ const Page = () => {
                 <h1 className='font-bold text-3xl'>Schedules</h1>
                 <p className='text-gray-500'>Manage trip schedules and assignments</p>
             </div>
-            <Link href='/schedules/add' className='bg-black h-9 text-white p-2 flex items-center rounded-lg hover:bg-gray-800 transition-colors'>
+            <button onClick={()=>setOpen(true)} className='bg-black h-9 text-white p-2 flex items-center rounded-lg hover:bg-gray-800 transition-colors'>
                 <div className='flex gap-1 items-center px-2'>
                     <span>+</span>
                     <span>Add Schedule</span>
                 </div>
-            </Link>
+            </button>
         </div>
+        
+{open &&(
+  <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+    <div className='bg-white w-full max-w-md rounded-2xl shadow-lg p-6 relative'>
+
+
+ <button
+        onClick={() => setOpen(false)}
+        className="cursor-pointer absolute top-4 right-4 text-gray-500 hover:text-black"
+      >
+        ✕
+      </button>
+
+<h2 className="text-xl font-semibold mb-1">Create New Schedule</h2>
+  <p className="text-gray-500 text-sm mb-4">
+        Schedule a new trip</p>
+
+
+<div className='mt-7'>
+    <div className='flex flex-col'>
+<label>Route</label>
+<input type="text" placeholder='Select route' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+    </div>
+    <div className='flex flex-col mt-2'>
+<label>Bus</label>
+<input type="text" placeholder='Select bus'className='border border-gray-300 p-1 mt-1 rounded-lg' />
+    </div>
+    <div className='flex flex-col mt-2'>
+<label>Driver</label>
+<input type="text" placeholder='Select driver' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+    </div>
+
+
+<div className='flex  gap-10'>
+<div className='flex flex-col mt-2'>
+    <label>Date</label>
+    <input type="text"  placeholder='dd/mm/yyyy' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+</div>
+<div className='flex flex-col mt-2'>
+    <label>Depature Time</label>
+    <input type="time"  placeholder='dd/mm/yyyy' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+</div>
+</div>
+
+<button className='bg-black w-full text-center p-2 rounded-lg mt-5 text-white'>
+    Create Schedule
+
+</button>
+
+
+</div>
+
+
+    </div>
+  </div>
+)}
+
+
+
+
+
 
         <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
             <StatCard title="Total Schedules" value={stats.total} />

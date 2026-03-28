@@ -1,3 +1,7 @@
+
+'use client'
+
+import { useState } from 'react'
 import React from 'react'
 import Sidebar from '@/app/components/Sidebar/page.jsx'
 import { CiLocationOn } from "react-icons/ci";
@@ -7,11 +11,12 @@ import { LuDollarSign } from "react-icons/lu";
 
 import Link from 'next/link'
 const page = () => {
+  const [open,setIsOpen]=useState(false)
   return (
     <div className='flex h-screen bg-gray-50'>
 <Sidebar/>
 
-<div className='h-20 w-full h-full overflow-y-auto p-7 '>
+<div className='w-full h-full overflow-y-auto p-7 '>
   <div>
     <div className='flex justify-between'>
     <div className='flex flex-col'>
@@ -20,7 +25,92 @@ const page = () => {
   </div>
 
   <div className='bg-black text-white h-10 items-center justify-center flex p-2 rounded-lg'>
-    <Link href='/routes'>+  Add Route</Link>
+    <button onClick={()=>setIsOpen(true)} className='bg-black h-9 text-white p-2 flex items-center rounded-lg hover:bg-gray-800 transition-colors'>+  Add Route</button>
+
+{open && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+    <div className='bg-white w-full max-w-md rounded-2xl shadow-lg p-6 relative'>
+
+<button onClick={()=>setIsOpen(false)}  className="cursor-pointer   absolute top-4 right-4 text-gray-500 hover:text-black">
+  ✕
+</button>
+
+<div className='text-black'>
+<h2 className="text-xl font-semibold mb-1">Create New Schedule</h2>
+  <p className="text-gray-500 text-sm mb-4">
+        Schedule a new trip</p>
+</div>
+
+
+<div className='flex flex-col gap-3 text-gray-700 mt-10'>
+  <div className='flex gap-10'>
+    <div>
+    <label className='text-black'>
+      Route Name
+    </label>
+    <input type="text" placeholder='City Express' className='border border-gray-300 p-1 rounded-lg mt-1'/>
+    </div>
+
+    <div>
+    <label>
+      Fare($) 
+    </label>
+    <input type="number" placeholder='15' className='border border-gray-300 p-1 rounded-lg mt-1'/>
+    </div>
+  </div>
+
+
+<div className='flex gap-10'>
+    <div>
+    <label className='text-black'>
+      Orgin
+    </label>
+    <input type="text" placeholder='Downtown Terminal' className='border border-gray-300 p-1 rounded-lg mt-1'/>
+    </div>
+
+    <div>
+    <label className='text-black'>
+      Destination 
+    </label>
+    <input type="text" placeholder='Airpot' className='border border-gray-300 p-1 rounded-lg mt-1'/>
+    </div>
+  </div>
+
+
+
+
+<div className='flex gap-10'>
+    <div>
+    <label className='text-black'>
+      Distance (km)
+    </label>
+    <input type="number" placeholder='25' className='border border-gray-300 p-1 rounded-lg mt-1'/>
+    </div>
+
+    <div>
+    <label className='text-black'>
+      Duration(min) 
+    </label>
+    <input type="number" placeholder='45' className='border border-gray-300 p-1 rounded-lg mt-1'/>
+    </div>
+  </div>
+</div>
+
+<button className='bg-black p-2 rounded-lg w-full mt-5'>
+  Add Route
+</button>
+
+
+
+
+
+    </div>
+  </div>
+)}
+
+
+
+
   </div>
 </div>
 

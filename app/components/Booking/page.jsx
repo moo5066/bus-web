@@ -7,6 +7,7 @@ import Link from 'next/link'
 const Page = () => {
   const [activeTab, setActiveTab] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [open , setOpen]=useState(false)
 
   // 1. Central Data Source
   const allBookings = [
@@ -39,9 +40,66 @@ const Page = () => {
             <h1 className='text-2xl font-bold'>Bookings</h1>
             <p className='text-gray-600'>Manage passenger bookings and reservations</p>
           </div>
-          <button className='flex gap-2 bg-black hover:bg-gray-800 text-white items-center px-4 py-2 rounded-lg transition-all'>
-            <span>+</span><span>Add Booking</span>
+          <button onClick={()=>setOpen(true)} className='flex gap-2 bg-black hover:bg-gray-800 text-white items-center px-4 py-2 rounded-lg transition-all'>
+            <span>+ New Booking</span>
           </button>
+{open && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+    <div className='bg-white w-full max-w-md rounded-2xl shadow-lg p-6 relative'>
+
+<button onClick={()=>setOpen(false)} className='right-0 top-0 absolute p-4 text-gray-500 hover:text-black'>
+  X
+</button>
+
+<div>
+  <h2 className="text-xl font-semibold mb-1">Create New Schedule</h2>
+  <p className="text-gray-500 text-sm mb-4">
+        Schedule a new trip</p>
+</div>
+
+
+
+<div>
+  <div className='flex flex-col gap-2'>
+<label >Schedule</label>
+     <select className="w-full border border-gray-300 rounded-lg px-3 py-2">
+            <option>Select schedule</option>
+            <option>Mountain Line -Bus-004 - 10:00</option>
+            <option>Coastal Route -Bus-002 -09:00</option>
+            <option>City Express -Bus-001 -14:00</option>
+          </select>
+  </div>
+
+
+<div className='flex flex-col mt-2'>
+    <label>Passenger Name</label>
+    <input type="text"  placeholder='MooAde' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+</div>
+<div className='flex flex-col mt-2'>
+    <label>Phone Number</label>
+    <input type="number"  placeholder='+1-555-0100' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+</div>
+<div className='flex flex-col mt-2'>
+    <label>Set Number</label>
+    <input type="text"  placeholder='A1' className='border border-gray-300 p-1 mt-1 rounded-lg'/>
+</div>
+
+</div>
+
+<button className='bg-black text-white p-1.5 text-center w-full mt-5 rounded-lg'>
+  Create Booking
+</button>
+
+
+
+</div>
+</div>
+
+)}
+
+
+
+
         </div>
 
         {/* Stats Grid */}

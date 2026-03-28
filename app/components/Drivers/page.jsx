@@ -1,3 +1,7 @@
+
+'use client'
+import { useState } from 'react'
+
 import React from 'react'
 import Sidebar from '@/app/components/Sidebar/page.jsx'
 import { CiSearch } from "react-icons/ci";
@@ -6,21 +10,112 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { SiExpertsexchange } from "react-icons/si";
 
 const page = () => {
+     const [open,setOpen]=useState(false)
+   
   return (
     <div className='flex  h-screen bg-gray-50'>
       <Sidebar/>
 
       <div className='w-full h-full overflow-y-auto p-7 '>
+     
         <div className='flex justify-between'>
             <div>
-<h1 className='text-2xl font-bold'>Drivers</h1>
+<h1 className='text-2xl font-bold'>Driver</h1>
 <p className='text-gray-600'>Manage driver information and assignments</p>
 </div>
-<div className='flex gap-2 bg-black h-8 text-white p-1.5 items-center rounded-lg'>
-    <p>+</p>
-    <p>Add</p>
-    <p>Driver</p>
+  <button onClick={() => setOpen(true)}
+  className='p-1 bg-black text-white rounded-lg h-10 w-30'
+>
+  + Add Driver
+</button>
+
+{open && (
+   <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+      <div className="bg-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
+         
+    
+           
+
+<h2 className="text-xl font-semibold mb-1">Add New Driver</h2>
+  <p className="text-gray-500 text-sm mb-4">
+        Register a new driver </p>
+
+      <div onClick={()=>setOpen(false)} className='cursor-pointer absolute   top-0 right-0 p-5'>
+         ✕
+      </div>
+
+<form className="space-y-4">
+         <label className="block text-sm font-medium mb-1 text-gray-500">
+           Full Name
+          </label>
+          <input
+            type="text"
+            placeholder="Moo Abdi"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+
+         <label className="block text-sm font-medium mb-1 text-gray-500">
+           License Number
+          </label>
+          <input
+            type="text"
+            placeholder="DL-2024-1234"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+          />
+
+
+<div className='flex justify-between'>
+   <div className='flex flex-col gap-2'>
+      <label className='text-gray-500'>
+         Phone
+      </label>
+
+<input type="text" placeholder='+1-555-0100'  className=' focus:outline-none border p-1 rounded-lg'/>
+   </div>
+   <div className='flex flex-col gap-2'>
+      <label className='text-gray-500'>
+         Experience (years)
+      </label>
+
+<input type="number" placeholder='5'  className=' focus:outline-none border p-1 rounded-lg'/>
+   </div>
 </div>
+
+<div className='flex flex-col gap-3'>
+   <div className='flex flex-col gap-2'>
+      <label className='text-gray-500'>Email</label>
+      <input type="email" placeholder='MooAbdi@gmail.com' className='border p-2 rounded-lg border-gray-300 '/>
+   </div>
+
+<div>
+          <label className="block text-gray-500 text-sm font-medium mb-1">
+            Status
+          </label>
+          <select className="w-full border border-gray-300 rounded-lg px-3 py-2">
+            <option>Select status</option>
+            <option>Active</option>
+            <option>Maintenance</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+<div>
+
+</div>
+
+
+
+</div>
+
+
+</form>
+
+
+
+
+
+      </div>
+   </div>
+)}
         </div>
 
 <div className='mt-10 text-gray-500 bg-gray-200 p-1 rounded-lg'> 
